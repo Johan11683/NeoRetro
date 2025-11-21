@@ -488,65 +488,109 @@
   }
 }
 
+/* ---------------------------------------
+   RESPONSIVE MOBILE < 600px
+---------------------------------------- */
+
+/* Centrer TOUTES les images + tout empiler en vertical */
 @media (max-width: 600px) {
-  /* Header en colonne, centré */
+
+    /* ====== NAV ====== */
+  .nav {
+    justify-content: center; /* centre les boutons */
+    text-align: center;       /* centre le contenu interne */
+  }
+
+  .nav a {
+    margin: 0 auto;           /* centre chaque bouton */
+    display: inline-block;    /* évite les étirements */
+  }
+
+  /* Centrer aussi le headerTop si tu veux tout aligner */
   .headerTop {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* === HERO === */
+  .hero {
+    grid-template-columns: 1fr; /* tout l’un sous l’autre */
+  }
+
+  /* === GRID PRODUITS === */
+  .grid {
+    grid-template-columns: 1fr; /* 1 colonne full width */
+  }
+
+  /* === GRID TCG / gadgets === */
+  .iconGrid {
+    grid-template-columns: 1fr; /* 1 colonne également */
+  }
+
+  /* === Alignements généraux === */
+  .productTop,
+  .iconHeader,
+  .iconBody,
+  .heroImageStack {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .tagline {
-    text-align: center;
+  .productImage,
+  .iconImage,
+  .heroImage,
+  .badgeGif,
+  .inlineGif,
+  .heroIconsRow img {
+    margin: 0 auto;
   }
 
-  .headerNewBadge {
-    align-self: center;
+  /* === Full width === */
+  .card,
+  .iconCard,
+  .section {
+    width: 100%;
   }
 
-  /* Nav centrée + boutons qui s’adaptent */
-  .nav {
-    justify-content: center;
+  /* ---------------------------------------
+     ★ Agrandir toutes les images & GIFS
+  ---------------------------------------- */
+
+  /* Images produits */
+  .productImage {
+    width: 80px;
+    height: auto;
   }
 
-  .nav a {
-    text-align: center;
-  }
-
-  /* Bandeau défilant au même padding que le reste */
-  .marqueeWrapper {
-    padding: 0 8px;
-  }
-
-  /* Contenu principal un peu moins serré sur les bords */
-  .main {
-    padding: 0 8px;
-  }
-
-  /* Hero en colonne + éléments centrés */
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .heroContent {
-    text-align: left; /* on garde le texte aligné à gauche */
-  }
-
-  .heroIconsRow {
-    justify-content: center;
-  }
-
-  .heroAside {
-    max-width: 100%;
-  }
-
-  .heroImage {
+  /* Images section Yu-Gi-Oh / MTG / gadgets */
+  .iconImage {
     width: 140px;
+    max-width: 180px;
+    height: auto;
   }
 
-  /* Grilles : 1 colonne en mobile */
-  .grid,
-  .iconGrid {
-    grid-template-columns: 1fr;
+  /* Gifs dans les titres */
+  .inlineGif {
+    width: 40px;
+    height: auto;
+  }
+
+  /* Gifs type NEW / SALE / HOT */
+  .badgeGif {
+    width: 42px;
+    height: auto;
+  }
+
+  /* Gifs dans le hero */
+  .heroIconsRow img {
+    width: 40px;
+    height: auto;
+  }
+
+  /* images de la colonne aside si utilisées */
+  .heroImage {
+    width: 180px;
+    height: auto;
   }
 }
