@@ -1,0 +1,552 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------
+   HEADER
+---------------------------------------- */
+
+.header {
+  border-bottom: 2px solid var(--border-strong);
+  background: #ffffff;
+}
+
+/* même largeur que le contenu principal */
+.headerTop {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 12px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  border-bottom: 1px solid var(--border-soft);
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.logoPixel {
+  display: inline-block;
+  padding: 2px 4px;
+  margin-right: 2px;
+  background: var(--blue-main);
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 18px;
+}
+
+.logoAccent {
+  color: var(--red-accent);
+  margin-left: 2px;
+}
+
+.tagline {
+  font-size: 12px;
+  color: #555;
+}
+
+/* petit gif NEW! dans le header */
+.headerNewBadge {
+  width: 48px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* barre de nav alignée sur le contenu */
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6px 12px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  background: var(--yellow-bar);
+  border-top: 1px solid #fff9b5;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.nav a {
+  padding: 4px 8px;
+  border: 1px solid var(--border-soft);
+  background: #fffef3;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  border-color: var(--blue-main);
+  background: #fff;
+}
+
+/* bandeau défilant aligné lui aussi */
+
+/* bandeau défilant, aligné comme le contenu */
+
+.marqueeWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+
+  background: #fffdf0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+
+  overflow: hidden;
+}
+
+.marqueeTrack {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 4px 0;
+
+  animation: marquee 16s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ---------------------------------------
+   LAYOUT PRINCIPAL
+---------------------------------------- */
+
+.main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 12px auto 24px auto;
+  padding: 0 12px;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.heroContent {
+  border: 1px solid var(--border-soft);
+  background: #ffffff;
+  padding: 12px;
+}
+
+.heroContent h1 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+}
+
+.heroHighlight {
+  color: var(--blue-main);
+}
+
+.heroContent p {
+  margin: 0 0 8px 0;
+}
+
+.heroList {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.heroList li {
+  margin-bottom: 4px;
+}
+
+/* rangée de petits gifs sous le texte */
+
+.heroIconsRow {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.heroIconsRow img {
+  width: 32px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* colonne droite du hero */
+
+.heroAside {
+  border: 1px solid var(--border-soft);
+  background: #ffffff;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.crtFrame {
+  border: 2px solid var(--border-strong);
+  padding: 8px;
+  background: #111;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.crtTitle {
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+}
+
+.crtFrame ul {
+  list-style: square;
+  padding-left: 18px;
+  margin: 0 0 6px 0;
+}
+
+.crtHint {
+  font-size: 11px;
+  color: #8f8;
+}
+
+/* pile d’images (gameboy + baladeur) */
+
+.heroImageStack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.heroImage {
+  width: 160px;
+  height: auto;
+  image-rendering: auto;
+  border: 1px solid var(--border-soft);
+  background: #fff;
+}
+
+/* ---------------------------------------
+   SECTIONS
+---------------------------------------- */
+
+.section {
+  border: 1px solid var(--border-soft);
+  background: #ffffff;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 4px;
+}
+
+.sectionIntro {
+  font-size: 13px;
+  margin: 4px 0 10px 0;
+}
+
+/* petit gif dans les titres */
+
+.inlineGif {
+  width: 32px;
+  height: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+  image-rendering: pixelated;
+}
+
+/* ---------------------------------------
+   CARDS PRODUITS
+---------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid var(--border-soft);
+  background: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--border-soft);
+  background: #f0f0f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTag {
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: 10px;
+  text-transform: uppercase;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+}
+
+/* gif type NEW!/HOT dans le header de la card */
+
+.badgeGif {
+  width: 32px;
+  height: auto;
+  margin-left: 4px;
+  image-rendering: pixelated;
+}
+
+.cardBody {
+  padding: 8px 6px 10px;
+}
+
+.productTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+/* image produit dans les cards */
+
+.productImage {
+  width: 52px;
+  height: auto;
+  image-rendering: auto;
+}
+
+.cardBody h3 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+
+.cardPrice {
+  font-weight: bold;
+  color: var(--red-accent);
+  margin: 0 0 6px 0;
+}
+
+.cardLink {
+  font-size: 12px;
+}
+
+/* ---------------------------------------
+   SECTION TCG / GADGETS
+---------------------------------------- */
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.iconCard {
+  border: 1px solid var(--border-soft);
+  background: #fbfbfb;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.iconHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.iconBadge {
+  width: 32px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.iconBody {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.iconImage {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  image-rendering: auto;
+  display: block;
+}
+
+.iconBody p {
+  margin: 0;
+}
+
+/* ---------------------------------------
+   À PROPOS
+---------------------------------------- */
+
+.aboutBox {
+  border: 1px solid var(--border-soft);
+  background: #f8f8f8;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.aboutBox p {
+  margin: 0 0 6px 0;
+}
+
+.aboutNote {
+  font-style: italic;
+  color: #555;
+}
+
+/* ---------------------------------------
+   FOOTER
+---------------------------------------- */
+
+.footer {
+  border-top: 2px solid var(--border-strong);
+  background: #ffffff;
+  padding: 10px 0;
+}
+
+.footerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.footerTitle {
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+.footerLinks a {
+  font-size: 12px;
+}
+
+.footerBadges {
+  margin: 6px 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footerBadges img {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+}
+
+.footerTiny {
+  margin: 4px 0 0 0;
+  font-size: 11px;
+  color: #666;
+}
+
+/* ---------------------------------------
+   RESPONSIVE
+---------------------------------------- */
+/* ---------------------------------------
+   RESPONSIVE
+---------------------------------------- */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .iconGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  /* Header en colonne, centré */
+  .headerTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  .headerNewBadge {
+    align-self: center;
+  }
+
+  /* Nav centrée + boutons qui s’adaptent */
+  .nav {
+    justify-content: center;
+  }
+
+  .nav a {
+    text-align: center;
+  }
+
+  /* Bandeau défilant au même padding que le reste */
+  .marqueeWrapper {
+    padding: 0 8px;
+  }
+
+  /* Contenu principal un peu moins serré sur les bords */
+  .main {
+    padding: 0 8px;
+  }
+
+  /* Hero en colonne + éléments centrés */
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    text-align: left; /* on garde le texte aligné à gauche */
+  }
+
+  .heroIconsRow {
+    justify-content: center;
+  }
+
+  .heroAside {
+    max-width: 100%;
+  }
+
+  .heroImage {
+    width: 140px;
+  }
+
+  /* Grilles : 1 colonne en mobile */
+  .grid,
+  .iconGrid {
+    grid-template-columns: 1fr;
+  }
+}
