@@ -247,7 +247,7 @@ export default function Home() {
           <section className={styles.section} id="consoles">
             <h2>Consoles &amp; jeux rétro</h2>
             <p className={styles.sectionIntro}>
-              Game Boy Color, GBA SP, Tamagotchi… Ouais c`&apos;`est à cause de ça ta myopie !
+              Game Boy Color, GBA SP, Tamagotchi… Ouais c’est à cause de ça ta myopie !
             </p>
 
             <div className={styles.grid}>
@@ -289,7 +289,7 @@ export default function Home() {
             <h2>Merch &amp; concerts 2000s</h2>
             <p className={styles.sectionIntro}>
               Posters, t-shirts de concerts, baladeurs CD anti-choc…  
-              Tout ce qu’il faut pour faire croire que tu vas à la boom ce soir (nuit blanche jusqu`&apos;`à 22h).
+              Tout ce qu’il faut pour faire croire que tu vas à la boom ce soir (nuit blanche jusqu’à 22h).
             </p>
 
             <div className={styles.grid}>
@@ -372,7 +372,7 @@ export default function Home() {
             <div className={styles.aboutBox}>
               <p>
                 Néo Rétro est un projet perso conçu en quelques instants comme un clin d’oeil à ma jeunsesse, au web des années 2000 :
-                bordures grises, liens bleus, bandeau jaune… mais avec un code 100% moderne. En fait j`&apos;`avais pas internet début 2000, mais en vrai, ça m`&apos;`a fait marrer.
+                bordures grises, liens bleus, bandeau jaune… mais avec un code 100% moderne. En fait j’avais pas internet début 2000, mais en vrai, ça m’a fait marrer.
               </p>
               <p>
                 Le but : montrer que l’on peut créer des univers graphiques marqués, s’amuser avec
