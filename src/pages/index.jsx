@@ -32,15 +32,15 @@ const featuredProducts = [
     category: 'Consoles & jeux',
     items: [
       {
-        name: 'Game Boy Color transparente',
-        price: '79,00 €',
+        name: 'Nouvelle GBA SP',
+        price: '99,00 €',
         tag: 'old-school',
         image: '/images/gbasp.png',
         badge: '/buttons/hot.gif', // petit clin d’œil “HOT!”
       },
       {
-        name: 'GBA SP édition 2003',
-        price: '99,00 €',
+        name: 'Game Boy Color transparente',
+        price: '79,00 €',
         tag: 'Best-seller',
         image: '/images/gameboy.png',
         badge: '/buttons/hot.gif',
